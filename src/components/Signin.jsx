@@ -36,7 +36,7 @@ const Signin = () => {
     }
 
   return (
-    <div>
+    <div className="w-full h-screen pt-16 pl-6">
        <form onSubmit={handleSignIn} action="">
         <h2>Sign In!</h2>
         

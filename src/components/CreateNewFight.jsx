@@ -69,7 +69,7 @@ const CreateNewFight = () => {
     };
 
     return (
-    <div>
+    <div className="w-full h-full pt-16 pl-6">
       <h4>Record Fight</h4>
       <p>Selected Event: {selectedEvent?.event_id || ''}</p>
       <SearchEvents selectedEvent={selectedEvent} setSelectedEvent={setSelectedEvent}></SearchEvents>

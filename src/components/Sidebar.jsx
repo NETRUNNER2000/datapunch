@@ -82,19 +82,19 @@ const Sidebar = () => {
       </TabsContent>
       <TabsContent value="tab-2">
       <SearchEvents></SearchEvents>
-      <Link to="/createevent">Create New Event</Link>
+      {isAdmin && (<Link to="/createevent">Create New Event</Link>)}
       </TabsContent>
       <TabsContent value="tab-3">
         <p>There is meant to be a list of divisions here...</p>
-        <Link to="/createdivision">Create New Division</Link>
+        {isAdmin && (<Link to="/createdivision">Create New Division</Link>)}
       </TabsContent>
       <TabsContent value="tab-4">
         <p>There is meant to be a list of fights here</p>
-        <Link to="/createfight">Record New Fight</Link>
+        {isAdmin && (<Link to="/createfight">Record New Fight</Link>)}
       </TabsContent>
       <TabsContent value="tab-5">
        <p>There is meant to be a list of clubs here...</p>
-       <Link to="/createclub">Create New Club</Link>
+       {isAdmin && (<Link to="/createclub">Create New Club</Link>)}
       </TabsContent>
       <TabsContent value="tab-6">
        <MedicalRecords/>

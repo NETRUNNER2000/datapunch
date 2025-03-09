@@ -34,7 +34,7 @@ const Signup = () => {
     }
 
   return (
-    <div>
+    <div className="w-full h-screen pt-16 pl-6">
        <form onSubmit={handleSignUp} action="">
         <h2>Sign Up!</h2>
        

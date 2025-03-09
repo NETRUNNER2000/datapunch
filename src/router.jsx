@@ -10,19 +10,21 @@ import CreateNewFighter from "./components/CreateNewFighter";
 import CreateNewDivision from "./components/CreateNewDivision";
 import Event from "./components/Event";
 import CreateNewFight from "./components/CreateNewFight";
+import CreateNewClub from "./components/CreateNewClub";
 
 export const router = createBrowserRouter([
     {path: "/", element: <Signin/>},
     {path: "/signup", element: <Signup/>},
     {path: "/signin", element: <Signin/>},
-    {path: "/dashboard", element: <PrivateRoute> <Dashboard/> </PrivateRoute>},
+    {path: "/dashboard", element:  <Dashboard/> },
     {path: "/medicalrecords", element: <PrivateRoute> <MedicalRecords/> </PrivateRoute>},
     {path: "/eventinfo", element: <PrivateRoute> <Event/> </PrivateRoute>},
     {path: "/fighterinfo", element: <PrivateRoute> <FighterInformation/> </PrivateRoute>},
-    {path: "/createevent", element: <PrivateRoute> <CreateNewEvent/> </PrivateRoute>},
-    {path: "/createfighter", element: <PrivateRoute> <CreateNewFighter/> </PrivateRoute>},
-    {path: "/createdivision", element: <PrivateRoute> <CreateNewDivision/> </PrivateRoute>},
-    {path: "/createfight", element: <PrivateRoute> <CreateNewFight/> </PrivateRoute>},
+    {path: "/createevent", element: <PrivateRoute protectedRoute={true}> <CreateNewEvent/> </PrivateRoute>},
+    {path: "/createfighter", element: <PrivateRoute protectedRoute={true}> <CreateNewFighter/> </PrivateRoute>},
+    {path: "/createdivision", element: <PrivateRoute protectedRoute={true}> <CreateNewDivision/> </PrivateRoute>},
+    {path: "/createfight", element: <PrivateRoute protectedRoute={true}> <CreateNewFight/> </PrivateRoute>},
+    {path: "/createclub", element: <PrivateRoute protectedRoute={true}> <CreateNewClub/> </PrivateRoute>},
     
 
 ])
