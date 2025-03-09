@@ -79,6 +79,7 @@ const Sidebar = () => {
         <p>Loading ...</p>
         <h2>Fighters</h2>
         <SearchFighters/>
+        <Link to="/createfighter">Add A New Fighter</Link>
       </TabsContent>
       <TabsContent value="tab-2">
       <SearchEvents></SearchEvents>

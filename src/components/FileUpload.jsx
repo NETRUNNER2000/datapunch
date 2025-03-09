@@ -28,7 +28,7 @@ const FileUpload = () => {
         metadata: {
           owner_id: session.user.id, // Store the owner ID as metadata
         },
-      });
+    });
 
     setUploading(false);
 

@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
     {path: "/eventinfo", element: <PrivateRoute> <Event/> </PrivateRoute>},
     {path: "/fighterinfo", element: <PrivateRoute> <FighterInformation/> </PrivateRoute>},
     {path: "/createevent", element: <PrivateRoute protectedRoute={true}> <CreateNewEvent/> </PrivateRoute>},
-    {path: "/createfighter", element: <PrivateRoute protectedRoute={true}> <CreateNewFighter/> </PrivateRoute>},
+    {path: "/createfighter", element: <PrivateRoute protectedRoute={false}> <CreateNewFighter/> </PrivateRoute>},
     {path: "/createdivision", element: <PrivateRoute protectedRoute={true}> <CreateNewDivision/> </PrivateRoute>},
     {path: "/createfight", element: <PrivateRoute protectedRoute={true}> <CreateNewFight/> </PrivateRoute>},
     {path: "/createclub", element: <PrivateRoute protectedRoute={true}> <CreateNewClub/> </PrivateRoute>},
