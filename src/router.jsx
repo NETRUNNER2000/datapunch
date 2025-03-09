@@ -12,6 +12,8 @@ import Event from "./components/Event";
 import CreateNewFight from "./components/CreateNewFight";
 import CreateNewClub from "./components/CreateNewClub";
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 export const router = createBrowserRouter([
     {path: "/", element: <Signin/>},
     {path: "/signup", element: <Signup/>},
@@ -25,6 +27,8 @@ export const router = createBrowserRouter([
     {path: "/createdivision", element: <PrivateRoute protectedRoute={true}> <CreateNewDivision/> </PrivateRoute>},
     {path: "/createfight", element: <PrivateRoute protectedRoute={true}> <CreateNewFight/> </PrivateRoute>},
     {path: "/createclub", element: <PrivateRoute protectedRoute={true}> <CreateNewClub/> </PrivateRoute>},
-    
-
-])
+],
+{
+    basename: isProduction ? '/data-punch' : '/',
+}
+)
