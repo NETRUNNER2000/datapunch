@@ -29,6 +29,6 @@ export const router = createBrowserRouter([
     {path: "/createclub", element: <PrivateRoute protectedRoute={true}> <CreateNewClub/> </PrivateRoute>},
 ],
 {
-    basename: isProduction ? '/data-punch' : '/',
+    basename: isProduction ? '/datapunch' : '/',
 }
 )
